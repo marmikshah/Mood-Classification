@@ -10,7 +10,8 @@ def index():
 @app.route('/classify', methods=['POST'])
 def handle_data():
     lyrics = request.form['lyrics']
-    return Pipeline(lyrics);
+    pipeline = Pipeline(lyrics);
+    return pipeline.vectorize()
 
 if __name__ == "__main__":
     app.run()
