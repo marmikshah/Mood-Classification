@@ -1,7 +1,20 @@
 <html>
-    <body>
-        <form action="classify", method="POST">
-            <input type="text" name="lyrics">
-        </form>
-    </body>
+<style>
+    body {
+        max-width: 1180px;
+        width: 98%;
+        margin: 0px auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2> Mood classification on Lyrics. </h2>
+    <p> Please enter Lyrics in the textbox provided below</p>
+    <form action="classify" , method="POST">
+        <input type="text" name="lyrics">
+        <input type="submit">
+    </form>
+</body>
+
 </html>

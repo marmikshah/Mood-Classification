@@ -10,7 +10,16 @@ def index():
 @app.route('/classify', methods=['POST'])
 def handle_data():
     lyrics = request.form['lyrics']
+    if not lyrics :
+        return "No Lyrics Found!"
+    # Convert to list if it is not.
+    if type(lyrics) == type("") :
+        lyrics = [lyrics]
+
+    # Instantiate a pipeline object
     pipeline = Pipeline(lyrics);
+
+    # Get the results.
     return pipeline.vectorize()
 
 if __name__ == "__main__":
