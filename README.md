@@ -1,6 +1,4 @@
-# K3G
-# Usage
-
+## Usage
 Create a virtual environment
 ```bash
 virtualenv -p python3 venv
@@ -21,4 +19,12 @@ Run Server
 python app.py
 ```
 
+## Classifier Information - V1
+* Model : **Support Vector Machine**
+  * Training F1 : 0.997
+  * Validation F1 : 0.712
 
+* Method : TFIDF - Vectorizer 
+  * Stopwords : English
+  * N-Gram Range : (1,5)
+  
