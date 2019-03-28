@@ -8,3 +8,6 @@ venv/*
 
 # Exclude csv files
 *.csv
+
+# Exclude Datasets
+Notebooks/musicmood/*
