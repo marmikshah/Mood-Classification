@@ -14,6 +14,10 @@ class Track(object):
         # Variable storing lyrics of the current track.
         self.lyrics = lyrics
 
+    def label(self, mood) :
+        # This is to store the final label (Happy/Sad) after classification is complete.
+        self.mood = mood;
+
 
 class Musix(object):
     def __init__(self, country="us", apikey="acf266ecb81687ee6f567e6fe9d0ca06"):
