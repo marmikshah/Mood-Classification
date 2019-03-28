@@ -4,11 +4,13 @@ import requests
 # A simple class to store attributes of a single track.
 
 class Track(object):
-    def __init__(self, name, track_id):
+    def __init__(self, name, track_id, artist):
         # Name of the track (Can be used to display on the front end)
         self.name = name
         # ID of the track (Will be used to get the Lyrics)
         self.id = track_id
+        # Name of the artist
+        self.artist = artist
 
     def addLyrics(self, lyrics):
         # Variable storing lyrics of the current track.
@@ -16,7 +18,7 @@ class Track(object):
 
     def label(self, mood) :
         # This is to store the final label (Happy/Sad) after classification is complete.
-        self.mood = mood;
+        self.mood = mood
 
 
 class Musix(object):
@@ -69,8 +71,11 @@ class Musix(object):
             # Get the ID
             track_id = track['track']['track_id']
 
+            # Get the artist name
+            artist = track['track']['artist_name']
+            
             # Create a Track Object
-            trackObj = Track(name, track_id)
+            trackObj = Track(name, track_id, artist)
 
             # Save the track object.
             songs.append(trackObj)

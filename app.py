@@ -40,9 +40,9 @@ def musixmatch() :
         try :
             pipeline = Pipeline([track.lyrics])
             track.label(pipeline.vectorize())
-            result = result + (track.name + " : " + track.mood) + "<br><br>"
+            result = result + (track.name + " by <i>" + track.artist + "</i> : <b><u>" + track.mood) + "</b></u><br><br>"
         except AttributeError :
-            pass;
+            pass
 
     return render_template("musixmatch.html", k=k, result=result)
 
