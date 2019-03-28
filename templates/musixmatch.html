@@ -1,0 +1,18 @@
+<html>
+<style>
+    body {
+        max-width: 1180px;
+        width: 98%;
+        margin: 0px auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2> Classification Result on top {{k}} songs.</h2>
+    {% autoescape false %}
+    {{result}}
+    {% endautoescape %}
+</body>
+
+</html>

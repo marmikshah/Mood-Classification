@@ -40,11 +40,11 @@ def musixmatch() :
         try :
             pipeline = Pipeline([track.lyrics])
             track.label(pipeline.vectorize())
-            result = result + (track.name + "\t -> \t" + track.mood) + "<br>"
+            result = result + (track.name + " : " + track.mood) + "<br><br>"
         except AttributeError :
             pass;
 
-    return result
+    return render_template("musixmatch.html", k=k, result=result)
 
 # Main Function
 if __name__ == "__main__":
