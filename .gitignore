@@ -1,9 +1,9 @@
 # Don't send any caches
 __pycache__/*
 **/*__pycache__
+**/.ipynb_checkpoints/*
 
 # Exclude all Virtual Environments
-k3g-venv/*
 venv/*
 
 # Exclude csv files
