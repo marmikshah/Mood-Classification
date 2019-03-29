@@ -11,3 +11,5 @@ venv/*
 
 # Exclude Datasets
 Notebooks/musicmood/*
+
+**/*.pyc

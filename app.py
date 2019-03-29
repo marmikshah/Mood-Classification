@@ -1,6 +1,7 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from pipeline import Pipeline
 from musixmatch.api import Musix, Track;
+from ibm.tone import ToneAnalyzer;
 
 app = Flask(__name__)
 
@@ -40,7 +41,11 @@ def musixmatch() :
         try :
             pipeline = Pipeline([track.lyrics])
             track.label(pipeline.vectorize())
-            result = result + (track.name + " by <i>" + track.artist + "</i> : <b><u>" + track.mood) + "</b></u><br><br>"
+
+            ibm = ToneAnalyzer();
+            imb_results = ibm.analyze(track);
+            result = result + (track.name + " by <i>" + track.artist + "</i> : <b><u>" + track.mood + "</b></u> || IBM's Results <b><u>" + ', '.join(imb_results)) + "</b></u><br><br>"
+
         except AttributeError :
             pass
 
