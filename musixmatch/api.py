@@ -55,7 +55,7 @@ class Musix(object):
 
         # Params for the Request
         querystring = {"format": "json", "callback": "callback",
-                       "country": self.country, "apikey": self.apikey}
+                       "country": self.country, "apikey": self.apikey,"page_size":100,}
         headers = {'Accept': "text/plain", }
 
         # Perform Request and get the JSON response.
