@@ -14,10 +14,16 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-Run Server
+Run Server (without specifying filename)
 ```bash
 python app.py
 ```
+Run Server (with filename)
+```bash
+python app.py -f file_path.csv
+```
+
+
 
 ## Classifier Information - V1
 * Model : **Support Vector Machine**

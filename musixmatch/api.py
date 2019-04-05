@@ -1,6 +1,7 @@
 import json
 import requests
 
+
 # A simple class to store attributes of a single track.
 
 class Track(object):
